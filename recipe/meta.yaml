@@ -30,6 +30,7 @@ requirements:
     - r-later
     - r-processx
     - r-rmarkdown
+    - r-rsconnect >=0.8.26
     - r-rstudioapi
     - r-yaml
   run:
@@ -38,6 +39,7 @@ requirements:
     - r-later
     - r-processx
     - r-rmarkdown
+    - r-rsconnect >=0.8.26
     - r-rstudioapi
     - r-yaml
 
