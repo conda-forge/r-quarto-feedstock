@@ -1,11 +1,11 @@
-About r-quarto
-==============
+About r-quarto-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quarto-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/quarto-dev/quarto-r
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quarto-feedstock/blob/main/LICENSE.txt)
 
 Summary: Convert R Markdown documents and 'Jupyter' notebooks to a variety of output formats using 'Quarto'.
 
