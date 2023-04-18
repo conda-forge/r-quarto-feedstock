@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,6 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
+    - quarto
     - r-base
     - r-jsonlite
     - r-later
@@ -34,6 +35,7 @@ requirements:
     - r-rstudioapi
     - r-yaml
   run:
+    - quarto
     - r-base
     - r-jsonlite
     - r-later
@@ -44,9 +46,13 @@ requirements:
     - r-yaml
 
 test:
+  requires:
+    - r-testthat >=3.1.0
   commands:
-    - $R -e "library('quarto')"           # [not win]
-    - "\"%R%\" -e \"library('quarto')\""  # [win]
+    - $R -e "library('quarto')"                 # [not win]
+    - $R -e "testthat::test_package('quarto')"  # [not win]
+    - "\"%R%\" -e \"library('quarto')\""                 # [win]
+    - "\"%R%\" -e \"testthat::test_package('quarto')\""  # [win]
 
 about:
   home: https://github.com/quarto-dev/quarto-r
@@ -55,6 +61,7 @@ about:
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
