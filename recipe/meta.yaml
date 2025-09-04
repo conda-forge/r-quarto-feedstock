@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quarto_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quarto/quarto_{{ version }}.tar.gz
-  sha256: 1553935c956ea207c13360c36f07bfa038b37d84833eda64418b561295a9748c
+  sha256: 4c79dbcffc1786c660c9c5acb55ba1e63bcc59aeece14451acf96635c9673920
 
 build:
   number: 0
